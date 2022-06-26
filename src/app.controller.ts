@@ -9,4 +9,14 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  @Get('test')
+  test(): string {
+    return 'tested';
+  }
+
+  @Get('webdriver')
+  async test2(): Promise<string> {
+    return await this.appService.test();
+  }
 }
